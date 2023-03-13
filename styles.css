@@ -27,6 +27,10 @@ html {
   padding-top: 30px;
 }
 
+.headerFixed {
+  height: 300px;
+}
+
 .play {
   margin: 3% auto;
   font-family: 'Press Start 2P', cursive;
@@ -35,10 +39,11 @@ html {
   border-radius: 2vh;
   transition: 225ms;
   width: 300px;
+  max-width: 80vw;
   height: 130px;
   background-color: #14477d;
   color: rgb(58, 114, 163);
-  transition: 250ms;
+  transition: 125ms;
 }
 
 .playHidden {
@@ -179,6 +184,10 @@ a {
     font-size: .8rem;
     padding: 35px 0;
     margin: 2% auto;
+  }
+
+  .play {
+    font-size: 1rem;
   }
 
   .btn {
