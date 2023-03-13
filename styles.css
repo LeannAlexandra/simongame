@@ -4,6 +4,10 @@ body {
   transition: 4000ms;
 }
 
+html {
+  user-select: none;
+}
+
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
@@ -16,6 +20,40 @@ body {
   width: 50%;
   margin: auto;
 
+}
+
+.row3 {
+  margin: 3%;
+  padding-top: 30px;
+}
+
+.play {
+  margin: 3% auto;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  border: 10px solid #051c34;
+  border-radius: 2vh;
+  transition: 225ms;
+  width: 300px;
+  height: 130px;
+  background-color: #14477d;
+  color: rgb(58, 114, 163);
+  transition: 250ms;
+}
+
+.playHidden {
+  opacity: 0;
+  height: 0px;
+}
+
+p {
+  user-select: none;
+}
+
+.play:hover {
+  border: 10px solid #001325;
+  background-color: #204d7e;
+  color: #5e9eff;
 }
 
 .btn {
@@ -90,4 +128,71 @@ body {
 a {
   color: rgb(153, 207, 255);
   text-decoration: none;
+}
+
+.play {
+  margin: auto;
+}
+
+#play {
+  margin: auto;
+}
+
+@media (max-width: 1100px) {
+
+  .container {
+    width: 90%;
+
+
+  }
+}
+
+@media (max-width: 720px) {
+
+  .container {
+    min-width: 97%;
+
+
+  }
+
+  .btn {
+    margin: 2%;
+    display: inline-block;
+    height: 200px;
+    max-width: 200px;
+    width: 40%;
+    border: 10px solid black;
+    border-radius: 20%;
+    transition: 225ms;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .container {
+    min-width: 100%;
+
+
+  }
+
+  #level-title {
+    font-size: .8rem;
+    padding: 35px 0;
+    margin: 2% auto;
+  }
+
+  .btn {
+    margin: 0;
+    display: inline-block;
+    height: 200px;
+    max-width: 200px;
+    width: 40%;
+    border: 0px solid black;
+    border-radius: 0%;
+    transition: 225ms;
+  }
+
+  .footer {
+    font-size: 0.6rem;
+  }
 }

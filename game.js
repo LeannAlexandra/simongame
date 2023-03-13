@@ -2,7 +2,7 @@ let waitTillNextRound = 3000;
 let waitTillNextPositionShow = 900;
 let animationTransitionOut = 75;
 let animationTransitionIn = 150;
-
+let playButton = $("#playButton");
 
 let sr = new Audio("sounds/red.mp3");
 let sb = new Audio("sounds/blue.mp3");
@@ -173,6 +173,7 @@ function addInput(k) {
         setTimeout(() => { $("body").removeClass("game-over"); }, (waitTillNextRound * 0.4));
         clear()
         $("h1").text("OOPS! Try Again");
+        setTimeout(() => { playButton.removeClass("playHidden"); }, waitTillNextRound * 0.3);
         setTimeout(() => { playGame(); }, waitTillNextRound);
     }
 
@@ -182,3 +183,9 @@ g.click(() => { addInput('g'); });
 r.click(() => { addInput('r'); });
 y.click(() => { addInput('y'); });
 b.click(() => { addInput('b'); });
+
+playButton.click(() => {
+    setTimeout(() => { playButton.addClass("playHidden"); }, waitTillNextRound * 0.2);
+    setTimeout(() => { clear(); playGame(); }, waitTillNextRound)
+
+});
